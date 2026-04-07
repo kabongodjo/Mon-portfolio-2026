@@ -224,3 +224,8 @@ footer a:hover{
     color: orange;
     transform: translateY(-3px);
 }
+
+main .conteiner .icons a {
+    display: inline-block;
+    margin-right: 3rem;
+}
