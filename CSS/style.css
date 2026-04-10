@@ -225,7 +225,174 @@ footer a:hover{
     transform: translateY(-3px);
 }
 
-main .conteiner .icons a {
+h1{
+    text-align: center;
+    color: var(--violet-doux);
+}
+
+h1::after{
+    content: '';
+    width: 60px;
+    height: 4px;
+    display: block;
+    margin: 1.2rem auto;
+    background-color: var(--violet-doux);
+    border-radius: 2px;
+}
+.contact {
+    width: 80%;
+    margin: 4rem auto;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.contact-info p {
+    margin: 1rem 0;
+    color: var(--gris-fonce);
+    font-size: 1.1rem;
+}
+
+.contact-icons a {
+    font-size: 2rem;
+    margin: 0 10px;
+    color: var(--violet-doux);
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.contact-icons a:hover {
+    color: var(--violet-fonce);
+    transform: translateY(-3px);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+.contact-form input {
+    padding: 12px;
+    border: 1px solid var(--gris-clair);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background-color: var(--violet-doux);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--violet-fonce);
+    transform: translateY(-2px);
+}
+
+.projets {
+    width: 85%;
+    margin: 4rem auto;
+    text-align: center;
+}
+
+.projets-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.projet-card {
+    background-color: white;
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.projet-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.projet-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.projet-card h3 {
+    margin: 1rem 0 0.5rem;
+    color: var(--violet-doux);
+}
+
+.projet-card p {
+    padding: 0 1rem;
+    font-size: 0.95rem;
+    color: var(--gris-fonce);
+}
+
+.tech {
+    margin: 1rem 0;
+}
+
+.tech span {
     display: inline-block;
-    margin-right: 3rem;
+    background-color: var(--gris-clair);
+    color: var(--gris-tres-fonce);
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin: 5px;
+    font-size: 0.85rem;
+}
+
+.projet-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.projet-links a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: white;
+    background-color: var(--violet-doux);
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.projet-links a i {
+    margin-right: 5px;
+}
+
+.projet-links a:hover {
+    background-color: var(--violet-fonce);
+    transform: translateY(-2px);
 }
