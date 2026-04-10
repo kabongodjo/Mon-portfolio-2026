@@ -396,3 +396,189 @@ h1::after{
     background-color: var(--violet-fonce);
     transform: translateY(-2px);
 }
+
+/* --- MISE EN FORME DU MAIN (PASSIONS) --- */
+
+main {
+    margin: 4rem auto;
+    padding: 0 20px;
+}
+
+/* Structure de base d'une section */
+.passion-section {
+    display: flex;
+    align-items: center; /* Aligne le numéro avec le centre du contenu */
+    gap: 30px;
+    margin-bottom: 5rem;
+}
+
+/* Inversion pour une section sur deux */
+.passion-section.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Le numéro dans un cercle */
+.number-badge {
+    background-color: var(--violet-doux);
+    color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* Conteneur global Image + Texte */
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    flex-grow: 1;
+    gap: 25px;
+    min-height: 200px; /* Assure une hauteur constante */
+}
+
+.image-box {
+    flex: 1;
+}
+
+.image-box img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.text-box {
+    flex: 2;
+}
+
+.text-box h3 {
+    color: var(--violet-doux);
+    margin-bottom: 10px;
+}
+
+/* Contrainte de 5 lignes maximum */
+.text-box p {
+    color: var(--gris-fonce);
+    font-size: 1.15rem; /* Taille augmentée comme demandé */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.4;
+}
+
+.divertissements {
+    padding: 60px 5%;
+}
+
+.divertissements h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--gris-tres-fonce);
+}
+
+/* Sections */
+.bloc {
+    padding: 60px 0;
+    background-color: var(--gris-tres-clair);
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Carte */
+.contenu {
+    color: var(--violet-doux);
+    background: white;
+    border-radius: 20px;
+    padding: 15px;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.divertissements h1{
+    color: var(--violet-doux);
+}
+
+/* Carte dans section violette */
+.bloc.violet .contenu {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
+/* Hover animation */
+.contenu:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Inversion */
+.contenu.inverse {
+    background-color: var(--violet-doux);
+    flex-direction: row-reverse;
+    color: white;
+}
+
+.contenu.inverse p{
+    color: white;
+}
+
+/* Image */
+.contenu img {
+    width: 280px;
+    border-radius: 15px;
+    transition: transform 0.4s ease;
+}
+
+/* Zoom image au hover */
+.contenu:hover img {
+    transform: scale(1.05);
+}
+
+/* Texte */
+.texte h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.texte p {
+    line-height: 1.6;
+    color: var(--gris-fonce);
+}
+
+/* Texte blanc sur violet */
+.bloc.violet .texte p,
+.bloc.violet .texte h3 {
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contenu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contenu.inverse {
+        flex-direction: column;
+    }
+
+    .contenu img {
+        width: 100%;
+    }
+}
