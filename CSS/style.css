@@ -406,10 +406,11 @@ main {
 
 /* Structure de base d'une section */
 .passion-section {
+    max-width: 1000px;
     display: flex;
     align-items: center; /* Aligne le numéro avec le centre du contenu */
     gap: 30px;
-    margin-bottom: 5rem;
+    margin: 20px 10rem;
 }
 
 /* Inversion pour une section sur deux */
